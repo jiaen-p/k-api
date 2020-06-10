@@ -7,6 +7,7 @@ const app = express()
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+
 if (process.env.NODE_ENV === 'test'){
     const Mockgoose = require('mockgoose').Mockgoose
     const mockgoose = new Mockgoose(mongoose)
@@ -23,11 +24,6 @@ const notaSchema = mongoose.Schema({
     favorito: Boolean
 })
 const Nota = mongoose.model('Nota', notaSchema)
-
-app.route("/")
-.get((req,res) => {
-    res.sendStatus(200)
-})
 
 app.route("/notas")
 .post((req,res) => {

@@ -27,7 +27,7 @@ Para la creacion del endpoint se ha usado Express, con los siguientes métodos h
 Antes de empezar, el proyecto asume que existe una base de datos de MongoDB en la maquina local en el puerto predefinido con credenciales predefinidos. Puede modificar la url en el archivo index.ts en la linea 11 sustituyendo la url por una válida.
 
 - `git clone "<url del proyecto>"` para clonarlo
-- `npm install` en la raiz del a carpeta
+- `npm install` en la raiz de la carpeta
 - `tsc *.ts` para compilar los archivos ts
 - `node index.js` para inicializar el servidor en el puerto 3000
 
@@ -35,4 +35,7 @@ Antes de empezar, el proyecto asume que existe una base de datos de MongoDB en l
 
 Se ha configurado los archivos para realizar comprobaciones de que funcione los endpoints independientemente de la base de datos con el paquete mokgoose para simular la base de datos de mongodb. Se ha usado Mocha para realizar todo el test con la ayuda de chai y supertest, para comparar respuestas y realizar peticiones respectivamente.
 
-Para realizar el test: `npm run test`
+### Para realizar el test
+
+- `tsc ./test/*.ts` para compilar los archivos ts
+- `npm run test` para ejecutar la prueba
