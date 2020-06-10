@@ -1,12 +1,13 @@
 process.env.NODE_ENV = 'test'
 
+import 'mocha'
 import { app } from '../index'
 const expect = require('chai').expect
-import 'mocha'
 const request = require('supertest')
 
+
 describe('GET /notas', () => {
-    it('OK, get all notes work', (done) => {
+    it('OK, get all notes', (done) => {
         request(app).post('/notas')
         .send({"notas": [{"nota": "test3"},{ "nota": "test4"}]})
         .then(() =>{

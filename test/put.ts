@@ -1,8 +1,8 @@
 process.env.NODE_ENV = 'test'
 
+import 'mocha'
 import { app } from '../index'
 const expect = require('chai').expect
-import 'mocha'
 const request = require('supertest')
 
 describe('PUT /notas', () => {
@@ -21,7 +21,6 @@ describe('PUT /notas', () => {
                         expect(res.body.favorito).to.be.true
                         done()
                     })
-
                 })
             })
         })

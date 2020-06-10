@@ -1,8 +1,7 @@
 process.env.NODE_ENV = 'test'
 
-import { app } from '../index'
-import { expect } from 'chai'
 import 'mocha'
+import { app } from '../index'
 const request = require('supertest')
 
 describe('POST /notas', () => {
